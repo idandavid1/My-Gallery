@@ -1,7 +1,10 @@
-console.log('Starting up')
-console.log('date:',new Date('2022-12-4').toString('dddd MMM yyyy'))
+// console.log('Starting up')
+// console.log('date:',new Date('2022-12-4').toString('dddd MMM yyyy'))
 // console.log('');
 $(document).ready(onInit)
+$('#contact').submit(function (ev){
+  return onSubmit(ev, this)
+})
 
 function onInit(){
   renderPortfolio()
@@ -42,12 +45,23 @@ function renderModal(projectId){
     <a class="btn btn-primary" target="_blank" rel="noopener" href="${project.url}">Open Project</a>
     <button class="btn btn-primary" data-dismiss="modal" type="button">
     <i class="fa fa-times"></i>
-    Close Project</button>`
+    Close</button>`
  
   $('.modal-body').html(strHTML)
 }
 
 function myGetDate(millisecondsDate){
   const date = new Date(millisecondsDate)
-  return `${date.getDay()} / ${date.getDate() + 1} / ${date.getFullYear()}`
+  return `${date.getDate()} / ${date.getMonth() + 1} / ${date.getFullYear()}`
 }
+
+function onSubmit(event, elSelect){
+  event.preventDefault()
+  const mail = $(elSelect).children('.mail-div').children('.mail').val()
+  const subject = $(elSelect).children('.subject-div').children('.subject').val()
+  const body =`${mail}${$(elSelect).children('.message-div').children('.message-body').val()}`
+  if(!mail || !subject || !body) return
+  window.location.href = `https://mail.google.com/mail/?view=cm&fs=1&to=idand2000@gmail.com&su=${subject}&body=${body}`
+}
+
+
