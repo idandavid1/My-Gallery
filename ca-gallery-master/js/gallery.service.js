@@ -3,12 +3,12 @@
 var gProjects = createProjects()
 
 function createProjects(){
-    projs = [
-        createProject('MINESWEEPER', 'Minesweeper', 'Minesweeper', 'Lorem ipsum dolor sit amet consectetur.', 'Minesweeper-game', '2022-12-4'),
-        createProject('IN-PICTURE', ' In-Picture', 'In-Picture', 'Lorem ipsum dolor sit amet consectetur.', 'pacman', '2022-12-4'),
-        createProject('TUOCH-NUMS', 'Touch Nums', 'Touch Nums', 'Lorem ipsum dolor sit amet consectetur.', 'pacman', '2022-12-4'),
-        createProject('BOOKS-SHOP', 'Books Shop', 'Books Shop', 'Lorem ipsum dolor sit amet consectetur.', 'pacman', '2022-12-4'),
-        createProject('PACMAN', 'Pacman', 'Pacman', 'Lorem ipsum dolor sit amet consectetur.', 'pacman', '2022-12-4')
+    const projs = [
+        createProject('minesweeper', 'Minesweeper game', 'Minesweeper', 'Lorem ipsum dolor sit amet consectetur.', 'Minesweeper-game', '2022-12-4'),
+        createProject('in-picture', ' In-Picture game for children', 'In-Picture', 'Lorem ipsum dolor sit amet consectetur.', 'pacman', '2022-12-4'),
+        createProject('touch-nums', 'Touch Nums game', 'Touch Nums', 'Lorem ipsum dolor sit amet consectetur.', 'pacman', '2022-12-4'),
+        createProject('books-shop', 'Books Shop platform to menege books', 'Books Shop', 'Lorem ipsum dolor sit amet consectetur.', 'pacman', '2022-12-4'),
+        createProject('pacman', 'Pacman', 'Pacman game', 'Lorem ipsum dolor sit amet consectetur.', 'pacman', '2022-12-4')
     ]
 
     return projs
