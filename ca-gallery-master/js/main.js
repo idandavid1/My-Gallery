@@ -3,7 +3,7 @@
 // console.log('');
 $(document).ready(onInit)
 $('#contact').submit(function (ev){
-  return onSubmit(ev, this)
+  return onSubmit(ev)
 })
 
 function onInit(){
@@ -20,7 +20,7 @@ function renderPortfolio(){
                   <i class="fa fa-plus fa-3x"></i>
                 </div>
               </div>
-              <img class="img-fluid" src="img/portfolio/01-thumbnail.jpg" alt="">
+              <img class="img-fluid" src="img/proj-picture/${project.id}.png" alt="">
             </a>
             <div class="portfolio-caption">
               <h4>${project.name}</h4>
@@ -36,7 +36,7 @@ function renderModal(projectId){
     const strHTML =
     `<h2>${project.name}</h2>
     <p class="item-intro text-muted">${project.title}</p>
-    <img class="img-fluid d-block mx-auto" src="img/portfolio/01-full.jpg" alt="">
+    <img class="img-fluid" src="img/proj-picture/${project.id}.png" alt="">
     <p>${project.desc}</p>
     <ul class="list-inline">
       <li>Date: ${myGetDate(project.publishedAt)}</li>
@@ -55,11 +55,11 @@ function myGetDate(millisecondsDate){
   return `${date.getDate()} / ${date.getMonth() + 1} / ${date.getFullYear()}`
 }
 
-function onSubmit(event, elSelect){
+function onSubmit(event){
   event.preventDefault()
-  const mail = $(elSelect).children('.mail-div').children('.mail').val()
-  const subject = $(elSelect).children('.subject-div').children('.subject').val()
-  const body =`${mail}${$(elSelect).children('.message-div').children('.message-body').val()}`
+  const mail = $('.mail').val()
+  const subject = $('.subject').val()
+  const body =`${mail}${$('.message-body').val()}`
   if(!mail || !subject || !body) return
   window.location.href = `https://mail.google.com/mail/?view=cm&fs=1&to=idand2000@gmail.com&su=${subject}&body=${body}`
 }
