@@ -1,6 +1,5 @@
-// console.log('Starting up')
-// console.log('date:',new Date('2022-12-4').toString('dddd MMM yyyy'))
-// console.log('');
+'use strict'
+
 $(document).ready(onInit)
 $('#contact').submit(function (ev){
   return onSubmit(ev)
