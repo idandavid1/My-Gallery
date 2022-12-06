@@ -9,7 +9,7 @@ function _createProjects(){
         _createProject('touch-nums', 'Touch Nums', 'Touch Nums game', 'Lorem ipsum dolor sit amet consectetur.', '-touch-nums', '2022-12-4', ["Matrixes"]),
         _createProject('books-shop', 'Books Shop', 'Book management website', 'Lorem ipsum dolor sit amet consectetur.', 'Books-Shop', '2022-12-4', ["table", "cards", "crudl"]),
         _createProject('pacman', 'Pacman', 'Pacman game', 'Lorem ipsum dolor sit amet consectetur.', 'pacman', '2022-12-4', ["Matrixes"]),
-        _createProject('ball-board', 'Ball-board', 'Ball-board game', 'Lorem ipsum dolor sit amet consectetur.', 'ball-board', '2022-12-4', ["Matrixes"])
+        _createProject('ball-board', 'Ball-board', 'Ball-board game', 'Lorem ipsum dolor sit amet consectetur.', '-ball-board', '2022-12-4', ["Matrixes"])
     ]
 
     return projs
